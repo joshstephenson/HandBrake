@@ -1630,8 +1630,8 @@ static void ShowHelp(void)
 "                           range.\n"
 "                           Separate tracks by commas.\n"
 "       --gain <float>      Amplify or attenuate audio before encoding.  Does\n"
-"                           NOT work with audio passthru (copy). Values are\n"
-"                           in dB.  Negative values attenuate, positive\n"
+"                           NOT work with audio passthrough (copy). Values\n"
+"                           are in dB.  Negative values attenuate, positive\n"
 "                           values amplify. A 1 dB difference is barely\n"
 "                           audible.\n"
 "       --adither <string>  Select dithering to apply before encoding audio:\n");
@@ -3875,7 +3875,7 @@ static hb_dict_t * PreparePreset(const char *preset_name)
 
     if (audio_copy_list != NULL)
     {
-        // Create autopassthru copy mask
+        // Create auto-passthrough copy mask
         hb_value_array_t *array = hb_value_array_init();
         for (ii = 0; audio_copy_list[ii] != NULL; ii++)
         {
